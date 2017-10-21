@@ -1,6 +1,6 @@
 # adler32
 
-Implements adler32 checksum function as described here: https://www.ietf.org/rfc/rfc1950.txt.
+Port of adler32 checksum function as described here: https://www.ietf.org/rfc/rfc1950.txt to Go.
 
 ## Example:
 
@@ -10,10 +10,12 @@ Implements adler32 checksum function as described here: https://www.ietf.org/rfc
 
 ## Tests
 
-```go
-go test
-go test -bench=.
+```bash
+$ go test
+PASS
+ok      github.com/sent-hil/adler32     2.429s
 
+$ go test -bench=.
 # This library is slightly faster than the one in standard library.
 $ go test -bench=.
 BenchmarkThis-4            10000            230169 ns/op
