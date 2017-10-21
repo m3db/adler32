@@ -4,16 +4,20 @@ Implements adler32 checksum function as described here: https://www.ietf.org/rfc
 
 ## Example:
 
-      adler32.Checksum([]byte("Hello World"))
+```go
+ adler32.Checksum([]byte("Hello World"))
+```
 
 ## Tests
 
-      go test
-      go test -bench=.
+```go
+go test
+go test -bench=.
 
-      # This library is slightly faster than the one in standard library.
-      $ go test -bench=.
-      BenchmarkThis-4            10000            230169 ns/op
-      BenchmarkStdLib-4          10000            190834 ns/op
-      PASS
-      ok      github.com/sent-hil/adler32     6.554s
+# This library is slightly faster than the one in standard library.
+$ go test -bench=.
+BenchmarkThis-4            10000            230169 ns/op
+BenchmarkStdLib-4          10000            190834 ns/op
+PASS
+ok      github.com/sent-hil/adler32     6.554s
+```
